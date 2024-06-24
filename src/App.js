@@ -11,7 +11,7 @@ function App() {
   const [theme, setTheme] = useState(JSON.parse(localStorage.getItem('theme')) || "medium");
 
   const handleSubmit = (event) => {
-    event.preventDefault();    
+    event.preventDefault();
 
     if(editid){
       const date = new Date();
@@ -54,7 +54,7 @@ function App() {
     <div className={"App " + theme}>
       <div className="container">
         <Header setTheme={setTheme} theme={theme}>
-          Taskmate
+          Task Manager
         </Header>
         <AddTask handleSubmit={handleSubmit} editid={editid} task={task} setTask={setTask}/>
         <ShowTask tasklist={tasklist} setTasklist={setTasklist} handleEdit={handleEdit} handleDelete={handleDelete}/>
